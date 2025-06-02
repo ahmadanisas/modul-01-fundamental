@@ -1,0 +1,17 @@
+<script>
+    //INPUT
+    const d1 = prompt("Masukkan tanggal pertama (YYYY-MM-DD)");
+    const d2 = prompt("Masukkan tanggal kedua (YYYY-MM-DD)");
+
+    //PROCESS
+    const date1 = new Date (d1); //milliseconds
+    const date2 = new Date (d2); //milliseconds
+
+    const timeDiff = Math.abs(date2 - date1); //selisih milliseconds
+    const dayDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24)); //milliseconds ke hari
+
+    // OUTPUT
+    const result = `Perbedaan hari antara ${d1} dan ${d2} adalah ${dayDiff} hari`;
+    alert(result);
+    console.log(result);
+</script> 
