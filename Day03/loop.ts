@@ -1,3 +1,6 @@
+// WHILE LOOP & DO WHILE : tergantung kondisi
+// FOR LOOP : diketahui batas
+
 // LOOPING STATEMENT : penulisan code yang ditujukan untuk mengulang eksekusi suatu program hingga kondisi tertentu.
 // e.g list nama
 
