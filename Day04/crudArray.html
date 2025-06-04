@@ -1,0 +1,75 @@
+<script>
+  // lihat produk
+  let lihat = "";
+  let daftarProduk = [
+    "Nasi Goreng",
+    "Ayam Kremes",
+    "Gurami Bakar",
+    "Udang Mentega",
+    "Cumi Asam Manis",
+  ];
+  function lihatProduk() {
+    lihat += "=== Daftar Produk ===\n";
+    for (let i = 0; i < daftarProduk.length; i++) {
+      lihat += `${i + 1}. ${daftarProduk[i]}\n`;
+    }
+    console.log(lihat);
+    alert(lihat);
+  }
+
+  // menu utama
+  const MenuUtama = "=== Menu Produk Restoran ===\n";
+  let menu = MenuUtama;
+  let option;
+  function pilihMenu() {
+    option = prompt(
+      MenuUtama +
+        "1. Lihat Produk\n" +
+        "2. Tambah Produk\n" +
+        "3. Perbarui Produk\n" +
+        "4. Hapus Produk\n" +
+        "5. Keluar\n\n" +
+        "Masukkan nomor menu :"
+    );
+  }
+
+  // tambah produk
+  function tambahProduk() {
+    let produkBaru = prompt("Masukkan nama produk baru:");
+    daftarProduk.push(produkBaru);
+    alert(`${produkBaru} berhasil ditambahkan.`);
+  }
+
+  // perbarui produk
+  function perbaruiProduk() {
+    let pilihProduk = prompt("Masukkan nomor produk yang ingin diubah:");
+    let namaBaruProduk = prompt("Masukkan nama produk baru:");
+    let nomorProduk = parseInt(pilihProduk) - 1;
+    alert(`Produk berhasil diubah menjadi ${namaBaruProduk}`);
+    daftarProduk[nomorProduk] = namaBaruProduk;
+  }
+
+  // hapus produk
+  function hapusProduk() {
+    let pilihProduk = prompt("Masukkan nomor produk yang ingin dihapus:");
+    let nomorProduk = parseInt(pilihProduk) - 1;
+    alert(`Produk berhasil dihapus`);
+    daftarProduk.splice(nomorProduk, 1);
+  }
+
+  // do...while loop
+  pilihMenu();
+  do {
+    if (option === "1") {
+      lihatProduk();
+    } else if (option === "2") {
+      tambahProduk();
+    } else if (option === "3") {
+      perbaruiProduk();
+    } else if (option === "4") {
+      hapusProduk();
+    }
+    pilihMenu();
+    lihat = "";
+  } while (option !== "5");
+</script>
