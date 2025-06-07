@@ -1,0 +1,94 @@
+<script>
+  const database = [
+    ["Kaos", 30000, 20],
+    ["Jaket", 80000, 10],
+    ["Celana", 40000, 10],
+  ];
+  let menu;
+
+  // menu utama
+  function MenuUtama() {
+    menu = prompt(`=== Menu Management Data ===
+  1. Lihat data
+  2. Tambah data
+  3. Perbarui data
+  4. Hapus data
+  5. Keluar
+
+  Masukkan nomor menu yang dipilih :`);
+  }
+
+  // lihat data
+  function lihatData() {
+    let daftar = "=== Daftar Data ===\n";
+    for (let i = 0; i < database.length; i++) {
+      const value = database[i];
+      daftar += `${i + 1}.${value[0]},  Rp${value[1]}, Stok: ${value[2]}\n`;
+    }
+    alert(daftar);
+  }
+
+  // tambah data
+  function tambahData() {
+    const nama = prompt("Masukkan nama data baru:");
+    const harga = prompt("Masukkan harga data baru:");
+    const stok = prompt("Masukkan stok data baru:");
+    database.push([nama, harga, stok]);
+    alert(
+      `${nama} berhasil ditambahkan dengan harga Rp${harga} dan jumlah stok ${stok}`
+    );
+  }
+
+  // perbarui data
+  function perbaruiData() {
+    lihatData();
+    let nilaiBaru = "";
+    const opsi = parseInt(prompt("Pilih produk yang ingin diubah:"));
+    const ganti = parseInt(
+      prompt(`Pilih data yang ingin diganti:
+    1. Nama
+    2. Harga
+    3. Stok`)
+    );
+    const inputNilaiBaru = prompt("Masukkan nilai yang ingin diubah:");
+    if (ganti === 1) {
+      nilaiBaru += "Nama";
+    } else if (ganti === 2) {
+      nilaiBaru += "Harga";
+    } else if (ganti === 3) {
+      nilaiBaru += "Stok";
+    }
+    alert(
+      nilaiBaru +
+        ` "${
+          database[opsi - 1][ganti - 1]
+        }" berhasil diubah menjadi "${inputNilaiBaru}"`
+    );
+    database[opsi - 1][ganti - 1] = inputNilaiBaru;
+  }
+
+  // hapus data
+  function hapusData() {
+    lihatData();
+    const pilihData = parseInt(prompt("Pilih data yang ingin dihapus:"));
+    const deletedItem = database[pilihData - 1][0];
+    alert(`"${database[[pilihData] - 1]}" berhasil dihapus`);
+    database.splice(pilihData - 1, 1);
+  }
+
+  // menjalankan program
+  do {
+    MenuUtama();
+    if (menu === "1") {
+      lihatData();
+    } else if (menu === "2") {
+      tambahData();
+    } else if (menu === "3") {
+      perbaruiData();
+    } else if (menu === "4") {
+      hapusData();
+    } else if (menu === "5") {
+      break;
+    }
+  } while (true);
+</script>
