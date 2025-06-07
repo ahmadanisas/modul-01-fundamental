@@ -3,16 +3,16 @@ let namaToko: string = "TOKO OLGA";
 namaToko = "TOKO DONAT";
 
 // Template literal (diawali symbol `)
-let alamatToko :string = `Jl. Genteng kali Surabaya`;
+let alamatToko: string = `Jl. Genteng kali Surabaya`;
 
 // Penggabungan data string
 // Cara 1 : menggunakan penjumlahan data string (symbol +)
-let printInfo:string = namaToko + " " + alamatToko + " 0834343"
-console.log(printInfo); 
+let printInfo: string = namaToko + " " + alamatToko + " 0834343";
+console.log(printInfo);
 
 // Cara 2 : Template literal
-printInfo = `${namaToko} ${alamatToko} Telp. 3283729`
-console.log(printInfo); 
+printInfo = `${namaToko} ${alamatToko} Telp. 3283729`;
+console.log(printInfo);
 
 // Fungsi bawaan tipe data string
 // string.length : menghitung panjang data string atau menghitung jumlah variable dalam data string

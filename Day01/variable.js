@@ -26,7 +26,7 @@ alamat = "Rungkut Surabaya";
 // Keyword let : non-redeclare, reassign
 let program = "Web Development";
 // let program = "Digital Marketing"; // (non-redeclare)
-program ="Data Science"; // reassign
+program = "Data Science"; // reassign
 
 // Keyword const : non-redeclare, non-reassign
 const PI = 3.14; // variable selalu diawali huruf besar

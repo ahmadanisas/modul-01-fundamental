@@ -23,6 +23,10 @@ console.log(Math.round(25.4));
 console.log(Math.ceil(25.4));
 console.log(Math.floor(25.4));
 
+// Nilai selalu positif
+console.log(Math.abs(-10));
+
+// Pangkat dan akar
 console.log(Math.pow(4, 2)); //pangkat 2
 console.log(Math.sqrt(16)); //akar
 console.log(Math.cbrt(27)); //akar 3
