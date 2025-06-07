@@ -56,7 +56,7 @@ if(usia > 16) {
 }
 // kenapa const print tidak error? karena berbeda scope (wilayah), ditandai dengan {}
 
-let isNgantuk: boolean = true;
+let isNgantuk: boolean = false;
 if(isNgantuk) {
     console.log("Beli Kopi");
 } else {
@@ -120,7 +120,7 @@ console.log(result);
  */
 
 //example:
-const job: string = "Coder";
+const job: string = "Driver";
 
 switch(job){
     case "Coder": // job === "Coder"

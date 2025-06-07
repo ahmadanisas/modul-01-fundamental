@@ -1,25 +1,25 @@
 <script>
-    // prompt() : merupakan fungsi bawaan javascript yg digunakan html untuk menerima input dari user, menangkap data dalam tipe data string
-    // const nama = prompt("Masukkan nama anda");
+  // prompt() : merupakan fungsi bawaan javascript yg digunakan html untuk menerima input dari user, menangkap data dalam tipe data string
+  // const nama = prompt("Masukkan nama anda");
 
-    // console.log(nama);
+  // console.log(nama);
 
-    // alert() : menampilkan data melalui pop-up browser
-    //      alert(nama);
+  // alert() : menampilkan data melalui pop-up browser
+  //      alert(nama);
 
-    // e.g : calculator
-    // INPUT
-    // const angkaA = prompt("Masukkan angka pertama");
-    // const angkaB = prompt("Masukkan angka kedua");
+  // e.g : calculator
+  // INPUT
+  // const angkaA = prompt("Masukkan angka pertama");
+  // const angkaB = prompt("Masukkan angka kedua");
 
-    //PROCESS
-    // const result = parseInt(angkaA) + parseInt(angkaB); // diparsing karena data prompt harusnya string, harus diubah jadi number
+  //PROCESS
+  // const result = parseInt(angkaA) + parseInt(angkaB); // diparsing karena data prompt harusnya string, harus diubah jadi number
 
-    // OUTPUT
-    // alert(`${angkaA} + ${angkaB} = ${result}`);
+  // OUTPUT
+  // alert(`${angkaA} + ${angkaB} = ${result}`);
 
-    // Exercise : Buat aplikasi yang bisa mendeteksi suatu data email atau bukan
-    /*
+  // Exercise : Buat aplikasi yang bisa mendeteksi suatu data email atau bukan
+  /*
     Example 1
     input : edo@mail.com
     output : edo@mail.com adalah EMAIL
@@ -33,22 +33,21 @@
     output : edomail bukan EMAIL
     */
 
-    // INPUT
-    const email = prompt("Masukkan email");
+  // INPUT
+  const email = prompt("Masukkan email");
 
-    // PROCESS
-    const emailAt = email.includes("@");
-    const emailMail = email.includes("mail")
-    const emailDot = email.includes(".");
-   
-    if(emailAt && emailMail && emailDot){
-        result = `${email} adalah EMAIL`;
-    } else {
-        result = `${email} bukan EMAIL`;
-    }
+  // PROCESS
+  const emailAt = email.includes("@");
+  const emailMail = email.includes("mail");
+  const emailDot = email.includes(".");
 
-    //OUTPUT
-    alert(result)
-    console.log(result)
+  if (emailAt && emailMail && emailDot) {
+    result = `${email} adalah EMAIL`;
+  } else {
+    result = `${email} bukan EMAIL`;
+  }
 
+  //OUTPUT
+  alert(result);
+  console.log(result);
 </script>
